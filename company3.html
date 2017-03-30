@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<title>注册流程</title>
+	<link rel="stylesheet" href="assets/font/iconfont.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<script type="text/javascript" src="assets/js/fastclick.js"></script>
+	<link rel="stylesheet" href="assets/js/dialog.css">
+	<script type="text/javascript" src="assets/js/dialog.js"></script>
+	<script type="text/javascript" src="assets/js/iscroll.js"></script>
+	<link rel="stylesheet" href="assets/js/swiper-3.2.7.min.css">
+	<script type="text/javascript" src="assets/js/swiper-3.2.7.jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/mobile.js"></script>
+</head>
+
+<body>
+	<div class="warp">
+		<div class="top-bar">
+			<a onclick="back()"><i class="left icon-back"></i></a>
+			<div class="title text-overflow">企业会员注册</div>
+			<div class="right sure" data-end="1">下一步</div>
+		</div>
+		<ul class="levelbox white-bg flex-box">
+			<li class="level level1 active">企业信息</li>
+			<li class="level level2 active">企业负责人信息</li>
+			<li class="level level3 active">社会任职</li>
+		</ul>
+		<form data-posturl="#" data-gotourl="success.html" class="g-form" id="company3">
+		<div class="weui_cells">
+			<!--<div class="weui_cell">
+				<div class="weui_cell_hd">工作单位<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入工作单位" onblur="rule.empty($(this),'工作单位不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">工作职务<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入工工作职务" onblur="rule.empty($(this),'工作职务不能为空')" data-group-state="false"></div>
+			</div>-->
+			<div class="weui_cell">
+				<div class="weui_cell_hd">人大职务</div>
+				<div class="weui_cell_bd weui_cell_primary"><select class="weui_input" name="rendaDuty">
+					<option value="">请选择人大职务</option>
+					<option value="0">全国人大常委</option>
+					<option value="1">全国人大代表</option>
+					<option value="2">省人大常委</option>
+					<option value="3">省人大代表</option>
+					<option value="4">市人大常委</option>
+					<option value="5">市人大代表</option>
+					<option value="6">区人大常委</option>
+					<option value="7">区人大代表</option>
+				</select></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">工商联职务</div>
+				<div class="weui_cell_bd weui_cell_primary"><select class="weui_input" name="orgDuty">
+					<option value="">请选择工商联职务</option>
+					<option value="0">全国工商联主席</option>
+					<option value="1">全国工商联副主</option>
+					<option value="2">全国工商联常委</option>
+					<option value="3">全国工商联秘书</option>
+					<option value="4">全国工商联副秘</option>
+					<option value="5">省工商联主席</option>
+					<option value="6">省工商联副主席</option>
+					<option value="7">省工商联常委</option>
+					<option value="8">省工商联秘书长</option>
+					<option value="9">省工商联副秘书</option>
+					<option value="10">市工商联主席</option>
+					<option value="11">市工商联副主席</option>
+					<option value="12">市工商联秘书长</option>
+					<option value="13">市工商联副秘书</option>
+					<option value="14">市工商联常委</option>
+					<option value="15">区工商联主席</option>
+					<option value="16">区工商联副主席</option>
+					<option value="17">区工商联秘书长</option>
+					<option value="18">区工商联副秘书</option>
+					<option value="19">区工商联常委</option>
+				</select></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">政协职务</div>
+				<div class="weui_cell_bd weui_cell_primary"><select class="weui_input" name="zhengxieDuty">
+					<option value="">请选择政协职务</option>
+					<option value="0">全国政协常委</option>
+					<option value="1">全国政协常委</option>
+					<option value="2">省政协常委</option>
+					<option value="3">省政协委员</option>
+					<option value="4">市政协常委</option>
+					<option value="5">事政协委员</option>
+					<option value="6">区政协常委</option>
+					<option value="7">区政协委员</option>
+				</select></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">企业职务<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="comDuty" type="text" placeholder="请输入企业职务"  onblur="rule.empty($(this),'企业职务不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">技术职称</div>
+				<div class="weui_cell_bd weui_cell_primary"><select class="weui_input" name="skillDuty">
+					<option value="">请选择技术职称</option>
+					<option value="0">职称1</option>
+					<option value="1">职称1</option>
+					<option value="2">职称1</option>
+					<option value="3">职称1</option>
+					<option value="4">职称1</option>
+					<option value="5">职称1</option>
+					<option value="6">职称1</option>
+					<option value="7">职称1</option>
+				</select></div>
+			</div>
+		</div>
+		</form>
+	</div>
+
+</body>
+
+</html>

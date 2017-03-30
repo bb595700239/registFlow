@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<title>注册流程</title>
+	<link rel="stylesheet" href="assets/font/iconfont.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<link rel="stylesheet" href="assets/js/dialog.css">
+	<script type="text/javascript" src="assets/js/dialog.js"></script>
+	<script type="text/javascript" src="assets/js/iscroll.js"></script>
+	<link rel="stylesheet" href="assets/js/swiper-3.2.7.min.css">
+	<script type="text/javascript" src="assets/js/swiper-3.2.7.jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/mobile.js"></script>
+</head>
+
+<body>
+	<div class="warp">
+		<div class="top-bar">
+			<a onclick="back()"><i class="left icon-back"></i></a>
+			<div class="title text-overflow">团体会员注册</div>
+			<div class="right sure">下一步</div>
+		</div>
+		<ul class="levelbox white-bg flex-box">
+			<li class="level level1 active">商（协）会信息</li>
+			<li class="level level2">法人代表信息</li>
+		</ul>
+		<form data-posturl="#" data-gotourl="group2.html" class="g-form" id="group1">
+		<div class="weui_cells">
+			<div class="weui_cell">
+				<div class="weui_cell_hd">商（协）会中文名称<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workName" type="text" placeholder="请输入商（协）会中文名称" onblur="rule.empty($(this),'商（协）会中文名称不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">商（协）会英文名称</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workEname" type="text" placeholder="请输入商（协）会英文名称"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">通讯地址<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workAddress" type="text" placeholder="请输入通讯地址" onblur="rule.empty($(this),'通讯地址不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">网址</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workWebsite" type="text" placeholder="请输入网址"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">邮政编码</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workZip" type="text" placeholder="请输入邮政编码"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">成立时间<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workRegTime" type="date" placeholder="请输选择成立时间" onblur="rule.empty($(this),'成立时间不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">主要分支机构</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workBranch" type="text" placeholder="请输入主要分支机构"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">电话</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workPhone" type="text" placeholder="请输入电话" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">传真</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workFax" type="text" placeholder="请输入传真" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">邮箱</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workEmail" type="text" placeholder="请输入邮箱" ></div>
+			</div>
+			<!--<div class="weui_cell">
+				<div class="weui_cell_hd">工商登记证号</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入工商登记证号" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">企业性质<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><select  class="weui_input" name="" onblur="rule.empty($(this),'请选择企业性质')" data-group-state="true">
+					<option value="">请选择企业性质</option>
+					<option value="0">规上企业</option>
+					<option value="1">新三板上市</option>
+					<option value="2">主板上市</option>
+					<option value="3">民营500强</option>
+					<option value="4">中国高薪技术</option>
+					<option value="5">市级高新技术企</option>
+				</select></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">行业分类</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入行业分类" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">员工总数<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><select  class="weui_input" name="" onblur="rule.empty($(this),'请选择员工数')" data-group-state="true">
+					<option value="">请选择员工总数</option>
+					<option value="0">1-50</option>
+					<option value="1">50-100</option>
+					<option value="2">100-1000</option>
+					<option value="3">1000以上</option>
+				</select></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">注册资金</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入注册资金" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">资产总额</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入资产总额" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">上年度销售收入</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入上年度销售收入" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">上年度纳税额</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入上年度纳税额" ></div>
+			</div>-->
+
+			<div class="weui_cell">
+				<div class="weui_cell_hd">业务主管部门<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workChargeManager" type="text" placeholder="请输入业务主管部门" onblur="rule.empty($(this),'业务主管部门不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">批准登记机关<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workBizManager" type="text" placeholder="请输入批准登记机关" onblur="rule.empty($(this),'批准登记机关不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">社团法人证书号码<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workPersonID" type="text" placeholder="请输入法人证书号码" onblur="rule.empty($(this),'法人证书号码不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">社团法人机构代码证号码<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="workOrgID" type="text" placeholder="请输入社团法人机构代码证号码" onblur="rule.empty($(this),'社团法人机构代码证号码不能为空')" data-group-state="false"></div>
+			</div>
+		</div>
+		<div class="weui_cells_title">团体简介<span class="red">*</span></div>
+		<div class="weui_cells">
+			<div class="weui_cell">
+				<div class="weui_cell_bd weui_cell_primary"><textarea class="weui-textarea" name="workMemo" placeholder="请输入团体简介" rows="3" onblur="rule.empty($(this),'团体简介不能为空')" data-group-state="false"></textarea></div>
+			</div>
+		</div>
+		</form>
+	</div>
+
+</body>
+
+</html>

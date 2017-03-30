@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<title>注册流程</title>
+	<link rel="stylesheet" href="assets/font/iconfont.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<script type="text/javascript" src="assets/js/fastclick.js"></script>
+	<link rel="stylesheet" href="assets/js/dialog.css">
+	<script type="text/javascript" src="assets/js/dialog.js"></script>
+	<script type="text/javascript" src="assets/js/iscroll.js"></script>
+	<link rel="stylesheet" href="assets/js/swiper-3.2.7.min.css">
+	<script type="text/javascript" src="assets/js/swiper-3.2.7.jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/mobile.js"></script>
+</head>
+
+<body>
+	<div class="warp">
+		<div class="top-bar">
+			<a onclick="back()"><i class="left icon-back"></i></a>
+			<div class="title text-overflow">企业会员注册</div>
+			<div class="right sure">下一步</div>
+		</div>
+		<ul class="levelbox white-bg flex-box">
+			<li class="level level1 active">企业信息</li>
+			<li class="level level2 active">企业负责人信息</li>
+			<li class="level level3">社会任职</li>
+		</ul>
+		<form data-posturl="#" data-gotourl="company3.html" class="g-form" id="company2">
+		<div class="weui_cells">
+			<div class="weui_cell">
+				<div class="weui_cell_hd">姓名<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="name" type="text" placeholder="请输入姓名" onblur="rule.empty($(this),'姓名不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">性别<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><select  class="weui_input" name="gender" onblur="rule.empty($(this),'请选择性别')" data-group-state="true">
+					<option value="">请选择性别</option>
+					<option value="1">男</option>
+					<option value="2">女</option>
+				</select></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">手机号码<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="mobile" type="text" placeholder="请输入手机" onblur="rule.empty($(this),'手机号码不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">出生年月日</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="birthdate" type="date" placeholder="请选择出生年月"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">籍贯</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="nativePlace" type="text" placeholder="请输入籍贯" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">党派</div>
+				<div class="weui_cell_bd weui_cell_primary"><select  class="weui_input" name="party">
+					<option value="">请选择党派</option>
+					<option value="0">中共</option>
+					<option value="1">民革</option>
+					<option value="2">民盟</option>
+					<option value="3">民建</option>
+					<option value="4">民进</option>
+					<option value="5">农工</option>
+					<option value="6">致工</option>
+					<option value="7">九三学社</option>
+					<option value="8">台盟</option>
+					<option value="9">无党派</option>
+					<option value="10">群众</option>
+				</select></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">民族</div>
+				<div class="weui_cell_bd weui_cell_primary"><select  class="weui_input" name="nation">
+					<option value="">请选择民族</option>
+					<option value="0">汉族</option>
+				</select></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">学历</div>
+				<div class="weui_cell_bd weui_cell_primary"><select  class="weui_input" name="academic">
+					<option value="">请选择学历</option>
+					<option value="0">研究生</option>
+					<option value="1">本科</option>
+					<option value="2">大专</option>
+					<option value="3">高中及以下</option>
+					<option value="4">其他</option>
+				</select></div>
+			</div>
+
+			<!--<div class="weui_cell">
+				<div class="weui_cell_hd">传真</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入传真" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">邮箱</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入邮箱" ></div>
+			</div>-->
+			<div class="weui_cell">
+				<div class="weui_cell_hd">家庭住址</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="homeAddress" type="text" placeholder="请输入家庭住址" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">家庭电话</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="homePhone" type="text" placeholder="请输入家庭电话" ></div>
+			</div>
+			<!--<div class="weui_cell">
+				<div class="weui_cell_hd">邮政编码</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入邮政编码" ></div>
+			</div>-->
+			<div class="weui_cell">
+				<div class="weui_cell_hd">社团职务</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="massDuty" type="text" placeholder="请输入社团职务"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">联系人姓名<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="linker" type="text" placeholder="请输入联系人姓名" onblur="rule.empty($(this),'联系人姓名不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">联系人性别<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><select  class="weui_input" name="linkerGender" onblur="rule.empty($(this),'请选择联系人性别')" data-group-state="true">
+					<option value="">请选择联系人性别</option>
+					<option value="1">男</option>
+					<option value="2">女</option>
+				</select></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">联系人出生年月日</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="linkerBirthdate" type="date" placeholder="请选择联系人出生年月"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">联系人电话<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="linkerPhone" type="text" placeholder="请输入联系人电话" onblur="rule.empty($(this),'联系人电话不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">联系人传真</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="linkerFax" type="text" placeholder="请输入联系人传真"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">联系人对外联系语言</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" name="linkerLang" type="text" placeholder="请输入联系人对外联系语言"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">简历</div>
+				<div class="weui_cell_bd weui_cell_primary"><textarea class="weui-textarea" name="resume" placeholder="请输入简历" rows="3"></textarea></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">家庭成员情况</div>
+				<div class="weui_cell_bd weui_cell_primary"><textarea class="weui-textarea" name="familyMember" placeholder="请输入家庭成员情况" rows="3"></textarea></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">在港澳台及海外亲友情况</div>
+				<div class="weui_cell_bd weui_cell_primary"><textarea class="weui-textarea" name="seaMember" placeholder="请输入在港澳台及海外亲友情况" rows="3"></textarea></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">参与公益事业情况</div>
+				<div class="weui_cell_bd weui_cell_primary"><textarea class="weui-textarea" name="pubService" placeholder="请输入参与公益事业情况（主要项目、累计金额）" rows="3"></textarea></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">企业或法人代表主要获奖情况</div>
+				<div class="weui_cell_bd weui_cell_primary"><textarea class="weui-textarea" name="honour" placeholder="请输入企业或法人代表主要获奖情况（日期、名称）" rows="3"></textarea></div>
+			</div>
+		</div>
+		<!--<div class="weui_cells_title">简历</div>
+		<div class="weui_cells">
+			<div class="weui_cell">
+				<div class="weui_cell_bd weui_cell_primary"><textarea class="weui-textarea" placeholder="请输入简历" rows="3"></textarea></div>
+			</div>
+		</div>
+		<div class="weui_cells_title">家庭成员情况</div>
+		<div class="weui_cells">
+			<div class="weui_cell">
+				<div class="weui_cell_bd weui_cell_primary"><textarea class="weui-textarea" placeholder="请输入家庭成员情况" rows="3"></textarea></div>
+			</div>
+		</div>
+		<div class="weui_cells_title">在港澳台及海外亲友情况</div>
+		<div class="weui_cells">
+			<div class="weui_cell">
+				<div class="weui_cell_bd weui_cell_primary"><textarea class="weui-textarea" placeholder="请输入在港澳台及海外亲友情况" rows="3"></textarea></div>
+			</div>
+		</div><div class="weui_cells_title">参与公益事业情况</div>
+		<div class="weui_cells">
+			<div class="weui_cell">
+				<div class="weui_cell_bd weui_cell_primary"><textarea class="weui-textarea" placeholder="请输入参与公益事业情况（主要项目、累计金额）" rows="3"></textarea></div>
+			</div>
+		</div>
+
+		<div class="weui_cells_title">企业或法人代表主要获奖情况</div>
+		<div class="weui_cells">
+			<div class="weui_cell">
+				<div class="weui_cell_bd weui_cell_primary"><textarea class="weui-textarea" placeholder="请输入企业或法人代表主要获奖情况（日期、名称）" rows="3"></textarea></div>
+			</div>
+		</div>-->
+		</form>
+	</div>
+
+</body>
+
+</html>

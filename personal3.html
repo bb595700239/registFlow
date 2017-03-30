@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<title>注册流程</title>
+	<link rel="stylesheet" href="assets/font/iconfont.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<script type="text/javascript" src="assets/js/fastclick.js"></script>
+	<link rel="stylesheet" href="assets/js/dialog.css">
+	<script type="text/javascript" src="assets/js/dialog.js"></script>
+	<script type="text/javascript" src="assets/js/iscroll.js"></script>
+	<link rel="stylesheet" href="assets/js/swiper-3.2.7.min.css">
+	<script type="text/javascript" src="assets/js/swiper-3.2.7.jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/mobile.js"></script>
+</head>
+
+<body>
+	<div class="warp">
+		<div class="top-bar">
+			<a onclick="back()"><i class="left icon-back"></i></a>
+			<div class="title text-overflow">个人会员注册</div>
+			<div class="right sure">下一步</div>
+		</div>
+		<ul class="levelbox white-bg flex-box">
+			<li class="level level1 active">基本资料</li>
+			<li class="level level2 active">社会任职</li>
+			<li class="level level3 active">企业信息</li>
+		</ul>
+		<form data-posturl="#" data-gotourl="success.html" class="g-form">
+		<div class="weui_cells">
+			<div class="weui_cell">
+				<div class="weui_cell_hd">单位名称<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入单位名称" onblur="rule.empty($(this),'单位名称不能为空')" data-group-state="false"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">地址</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入地址"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">网址</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入网址"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">邮政编码</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入邮政编码"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">成立时间</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="date" placeholder="请输选择成立时间"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">主要分支</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入主要分支"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">电话</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入电话" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">传真</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入传真" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">邮箱</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入邮箱" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">工商登记证号</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入工商登记证号" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">企业性质<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><select  class="weui_input" name="" onblur="rule.empty($(this),'请选择企业性质')" data-group-state="true">
+					<option value="">请选择企业性质</option>
+					<option value="0">规上企业</option>
+					<option value="1">新三板上市</option>
+					<option value="2">主板上市</option>
+					<option value="3">民营500强</option>
+					<option value="4">中国高薪技术</option>
+					<option value="5">市级高新技术企</option>
+				</select></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">行业分类</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入行业分类" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">员工总数<span class="red">*</span></div>
+				<div class="weui_cell_bd weui_cell_primary"><select  class="weui_input" name="" onblur="rule.empty($(this),'请选择员工数')" data-group-state="true">
+					<option value="">请选择员工总数</option>
+					<option value="0">1-50</option>
+					<option value="1">50-100</option>
+					<option value="2">100-1000</option>
+					<option value="3">1000以上</option>
+				</select></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">注册资金</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入注册资金" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">资产总额</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入资产总额" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">上年度销售收入</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入上年度销售收入" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">上年度纳税额</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入上年度纳税额" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">所有者权益</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入所有者权益" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">法人代表</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入法人代表" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">税号</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入税号" ></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd">主营业务</div>
+				<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入主营业务" ></div>
+			</div>
+		</div>
+		</form>
+	</div>
+
+</body>
+
+</html>
